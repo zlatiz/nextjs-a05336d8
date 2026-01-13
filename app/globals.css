@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0B0B0D;
+    --foreground: #FFFFFF;
+    --primary: #2B0D52;
+    --primary-foreground: #ffffff;
+    --secondary: #FF2D95;
+    --muted: #151518;
+    --muted-foreground: #BFC0C5;
+    --accent: #00E6A8;
+    --border: #2E2E36;
+    --radius: 16px;
+  }
+
+  html, body, #__next {
+    height: 100%;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
+
+  a { color: inherit; text-decoration: none }
+}
+
+/* simple utility overrides to support glass cards and gradients */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  background-size: 300% 300%;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.55);
+}
+
+.header-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
